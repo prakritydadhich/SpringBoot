@@ -2,12 +2,15 @@ package com.infypraks.dao;
 
 
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Repository;
 
 import com.infypraks.model.PraksDemoModel;
 
 @Repository
-public interface PraksDemoDao extends CrudRepository<PraksDemoModel,Integer> {
-	
+public interface PraksDemoDao {
+	PraksDemoModel save(PraksDemoModel sales);
+	ArrayList<PraksDemoModel> findAll();
+	void deleteById(Integer id);
 }

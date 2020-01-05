@@ -48,7 +48,7 @@ public ResponseEntity<String> deleteSales(@PathVariable Integer id) {
 @SuppressWarnings("rawtypes")
 @GetMapping(value="/getall")
 public ResponseEntity<ArrayList>getAll(){
-
+    
 	return new ResponseEntity<ArrayList>(praksDemoService.fetchAll(), HttpStatus.OK);
 	
 	
