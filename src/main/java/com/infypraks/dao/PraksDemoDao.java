@@ -24,6 +24,6 @@ public interface PraksDemoDao {
 	
 	//PraksDemoModel Update(Integer id);
 	
-	PraksDemoModel  updateSales(Integer id);
+	void  updateSales(Integer id, PraksDemoModel model);
 
 }

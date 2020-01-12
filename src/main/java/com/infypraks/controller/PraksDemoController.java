@@ -43,7 +43,7 @@ public class PraksDemoController {
 	@ApiOperation(value = "Update Sales")
 @PutMapping(value="/update/{id}")	
 public ResponseEntity<String> updateSales(@PathVariable Integer id, @RequestBody PraksDemoModel model) {
-		//return new ResponseEntity<PraksDemoModel>(praksDemoService.updateSales(sales), HttpStatus.OK);
+		praksDemoService.updateSales(id, model);
 	
 	return new ResponseEntity<String>("updated successfully", HttpStatus.OK);			
 }

@@ -55,14 +55,13 @@ public class PraksDemoDaoImpl implements PraksDemoDao{
 	}
 	
 	@Override
-	public PraksDemoModel updateSales (Integer id) {
+	public void updateSales (Integer id, PraksDemoModel requestModel) {
 		Session session = sessionFactory.getCurrentSession();
-		 PraksDemoModel model = session.byId(PraksDemoModel.class).load(id);
+		 PraksDemoModel dbmodel = session.byId(PraksDemoModel.class).load(id);
 		
-		 model.setName(model.getName());
-		 model.setStatus(model.getStatus());
-	        session.update(model);
-	        return model;
+		 dbmodel.setName(requestModel.name);
+		 dbmodel.setStatus(requestModel.status);
+	     session.update(dbmodel);
 		
 	
 	}

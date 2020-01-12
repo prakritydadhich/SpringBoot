@@ -18,6 +18,9 @@ public class PraksDemoModel {
 		this.name=string;
 		this.status=string2;
 	}
+	
+	PraksDemoModel(){};
+	
 	@Override
 	public String toString() {
 		return "PraksDemoModel [id=" + id + ", name=" + name + ", status=" + status + "]";

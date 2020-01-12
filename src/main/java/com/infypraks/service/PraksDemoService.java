@@ -33,9 +33,9 @@ public class PraksDemoService {
 		praksdemodao.deleteById(id);
 	}
 	
-	public PraksDemoModel updateSales(Integer id) {
+	public void updateSales(Integer id, PraksDemoModel model) {
 		// TODO Auto-generated method stub
-		return praksdemodao.updateSales(id);
+		praksdemodao.updateSales(id, model);
 	}
 
 	
