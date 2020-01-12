@@ -12,6 +12,12 @@ public class PraksDemoModel {
 	
 	
 
+	
+	public PraksDemoModel(String string, String string2) {
+		// TODO Auto-generated constructor stub
+		this.name=string;
+		this.status=string2;
+	}
 	@Override
 	public String toString() {
 		return "PraksDemoModel [id=" + id + ", name=" + name + ", status=" + status + "]";

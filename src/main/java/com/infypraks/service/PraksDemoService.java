@@ -22,7 +22,10 @@ public class PraksDemoService {
 
 	public ArrayList<PraksDemoModel> fetchAll() {
 		// TODO Auto-generated method stub
-		return (ArrayList<PraksDemoModel>) praksdemodao.findAll();
+		ArrayList<PraksDemoModel> result = (ArrayList<PraksDemoModel>) praksdemodao.getAlldata();
+		System.out.println("New Sales added as:" +result);
+		return result;
+		
 	}
 
 	public void deleteSales(Integer id) {
@@ -30,9 +33,11 @@ public class PraksDemoService {
 		praksdemodao.deleteById(id);
 	}
 	
-	public PraksDemoModel updateSales(PraksDemoModel sales) {
+	public PraksDemoModel updateSales(Integer id) {
 		// TODO Auto-generated method stub
-		return praksdemodao.save(sales);
+		return praksdemodao.updateSales(id);
 	}
+
+	
 
 }
